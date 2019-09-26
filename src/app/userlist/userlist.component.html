@@ -1,0 +1,48 @@
+<div class="container-fluid bg-primary" style="height: 1500px">
+  <div class="row d-flex align-items-center justify-content-center h-100">
+    <div class="col-10 bg-light h-75 rounded shadow-lg">
+        <button [routerLink]="['/add']" type="button" class="btn btn-outline-success">Add</button>
+        <button type="button" class="btn btn-outline-danger">Delete</button>
+      <table class="table table-sm table-striped">
+        <thead class='thead-dark rounded'>
+          <th>id</th>
+          <th>Name</th>
+          <th>Apellido</th>
+          <th>Dni</th>
+          <th>Dirección</th>
+          <th>Email</th>
+          <th>F Nac</th>
+          <th>Exp</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>
+              {{user.idusuario}}
+            </td>
+            <td>
+              {{user.nombres}}
+            </td>
+            <td>
+              {{user.apellidos}}
+            </td>
+            <td>
+              {{user.dni}}
+            </td>
+            <td>
+              {{user.direccion}}
+            </td>
+            <td>
+              {{user.mail}}
+            </td>
+            <td>
+              {{user.fecha_nacimiento}}
+            </td>
+            <td>
+              {{user.anios_experiencia_profesional}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
